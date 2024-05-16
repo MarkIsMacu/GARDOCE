@@ -1,0 +1,492 @@
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+	border-radius:20px;
+}
+.header img {
+	border-radius: 70%;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+	border-radius:20px;
+}
+.stock{
+	display:flex;
+	flex-direction:column;
+	
+}
+.welcome-text {
+	display:flex;
+	flex-direction:column;
+    font-size: 40px;
+    font-weight: bold;
+	text-align: center;
+	font-family: cursive;
+}
+.navbar {
+    display: flex;
+    gap: 100px;
+	
+}
+.navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  border-radius:5px;
+  font-size: 17px;
+}
+.navbar li {
+    list-style: none;
+}
+.navbar a {
+	font-size: 17.5px;
+	font-family: cursive;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.navbar a:hover {
+    background-color: #ddd;
+}
+.product {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.product-media {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    gap: 20px;
+}
+.tagline {
+    margin-top: 10px;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+}
+span{
+	font-size:22px;
+	font-family: cursive;
+}
+
+ .p-caption {
+	font-family:cursive;
+	font-size: 22px;
+	max-width: 550px;
+	word-wrap: break-word;
+	line-height: 1.5;
+	text-align: left;		
+}
+
+.p-caption2 {
+	font-family:cursive;
+	font-size: 22px;
+	max-width: 550px;
+	word-wrap: break-word;
+	line-height: 1.5;
+	text-align: left;		
+}
+ h2{
+	font-size: 26px;
+    font-weight: bold;
+	text-align: left;
+	font-family: cursive;
+ }
+ 
+ /*HOME*/
+.crafts-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-bottom: 50px;
+}
+
+.crafts-text {
+	flex: 1 1 50%;
+	padding: 50px;
+	text-align: left;
+	margin-top:200px;
+	margin-left: 28px;
+}
+
+.crafts-image {
+	flex: 1 1 35%;
+	padding: 30px;
+	text-align: center;
+	border-radius:10px;
+}
+
+.crafts-title {
+	font-family:cursive;
+	font-size: 32px;
+	max-width: 100%;
+	word-wrap: break-word;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.crafts-title2 {
+	text-align:center;
+	font-family:cursive;
+	font-size: 40px;
+	max-width: 100%;
+	word-wrap: break-word;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.crafts-description {
+	font-family:sans-serif;
+	font-size: 23px;
+	max-width: 90%;
+	word-wrap: break-word;
+	line-height: 2;
+	text-align:justify;
+	margin-bottom: 20px;
+	
+}
+
+.crafts-image img {
+	border-radius: 10px;
+	width: 100%;
+	height: auto;
+}
+dl{
+	text-align:center;
+	font-family:sans-serif;
+	line-height:2;
+}
+dt{
+	font-family:sans-serif;
+	font-weight:bold;
+	font-size:25px;	
+}
+dd{
+	font-family: sans-serif;
+	font-size:20px;
+}
+dl dt a:hover {
+  text-decoration: underline;
+}
+a {
+   text-decoration: none; /* Remove underline */
+   color: #FF5733; /* Change color */
+   transition: color 0.5s; /* Smooth color transition on hover */
+}
+ a:hover {
+    color: #DADAD9; /* Change color on hover */
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 20px;
+  margin-left:320px;
+}
+
+#search-box {
+  padding: 5px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.4em;
+}
+
+#search-button {
+  background: none;
+  border: none;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.footer {
+  background-color: #A4A3A3;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li {
+  margin-bottom: 10px;
+}
+
+.social-links h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+
+ /*Products*/
+ .product-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  font-family:cursive;
+  font-size: 25px;
+}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.product-table img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.add-to-cart-button {	
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left:20px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #C3CAC6;
+}
+td{
+	font-family:cursive;
+	font-size: 20px;
+	max-width: 500px;
+	word-wrap: break-word;
+	line-height: 1.5;
+}
+
+.dl-2{
+	text-align:left;
+	font-family:sans-serif;
+	line-height:2;
+}
+.p-footerCaption{
+	font-family:cursive;
+	font-size: 30px;
+	margin:0;
+	padding:0;
+}
+figure{
+	font-size:30px;
+}
+.fig-caption{
+	font-family:cursive;
+	
+}
+
+.container4Contact {
+     max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+extarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+ input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.main-content {
+    display: flex;
+    margin: 20px;
+}
+.left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+section, article {
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+section {
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex; /* Add this line */
+    flex-direction: column; /* Add this line */
+    align-items: center; /* Add this line */
+}
+
+section img {
+	max-width: 70%;
+	align-self: center; /* Add this line */
+}
+aside {
+    flex: 1;
+    background-color: #f4f4f4;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.h2-index {
+    font-size: 22px;
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox for vertical alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+
+}
+
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Adjust based on your design */
+    height: 200px; /* Adjust based on your design */
+    overflow: hidden;
+    margin: auto;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideAnimation 12s infinite;
+}
+
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* This ensures the image covers the entire slide */
+	display:cover;
+	
+}
+
+.slide {
+   max-width:100%;
+
+    opacity: 0;
+    position: absolute;
+    animation: slideAnimation 12s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    33% { opacity: 1; }
+    41% { opacity: 0; }
+}
+
+ /* THIS IS PALATANDAAN*/ 
+</style>
